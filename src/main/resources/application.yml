@@ -1,0 +1,8 @@
+server:
+  ssl:
+    key-alias: instagram-oauth
+    key-store: classpath:instagram-oauth.jks
+    key-store-type: JKS
+    key-store-password: password
+
+  port: 8085
