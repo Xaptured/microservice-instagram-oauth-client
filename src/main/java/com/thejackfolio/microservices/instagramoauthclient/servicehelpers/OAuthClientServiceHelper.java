@@ -47,4 +47,9 @@ public class OAuthClientServiceHelper {
         String getPostsNewTokenUrl = "http://localhost:8084/instagram/get-posts-new-token?access_token="+accessToken;
         return getPostsNewTokenUrl;
     }
+
+    public String constructAccessDeniedURL(){
+        String accessDeniedURL = "http://localhost:8085/access-denied";
+        return  accessDeniedURL;
+    }
 }

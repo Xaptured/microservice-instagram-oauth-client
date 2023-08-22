@@ -1,5 +1,6 @@
 package com.thejackfolio.microservices.instagramoauthclient.services;
 
+import com.thejackfolio.microservices.instagramoauthclient.exceptions.AccessDeniedException;
 import com.thejackfolio.microservices.instagramoauthclient.exceptions.AccessTokenException;
 import com.thejackfolio.microservices.instagramoauthclient.models.AccessTokenResponse;
 import com.thejackfolio.microservices.instagramoauthclient.servicehelpers.OAuthClientServiceHelper;
@@ -19,9 +20,10 @@ public class OAuthClientService {
     public String getAccessToken(String code,
                                    String error,
                                    String error_reason,
-                                   String error_description){
+                                   String error_description) throws AccessDeniedException {
         if(error != null && error.equals("access_denied")){
             LOGGER.info("Access Denied");
+            throw new AccessDeniedException(error_description);
         }
         AccessTokenResponse response = null;
         try{
@@ -42,5 +44,9 @@ public class OAuthClientService {
 
     public String constructGetPostNewTokenURL(String accessToken){
         return helper.constructGetPostNewTokenURL(accessToken);
+    }
+
+    public String constructAccessDeniedURL(){
+        return helper.constructAccessDeniedURL();
     }
 }
