@@ -21,7 +21,7 @@ public class OAuthClientServiceHelper {
                     PropertiesReader.getProperty(StringConstants.GRANT_TYPE_ACCESS_TOKEN), PropertiesReader.getProperty(StringConstants.REDIRECT_URI), code);
             return apiClient.getAccessToken(request);
         } catch (Exception exception){
-            throw new AccessTokenException("Exception occurred while getting access token");
+            throw new AccessTokenException(StringConstants.ACCESS_TOKEN_EXCEPTION);
         }
     }
 

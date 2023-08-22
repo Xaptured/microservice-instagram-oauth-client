@@ -4,6 +4,7 @@ import com.thejackfolio.microservices.instagramoauthclient.exceptions.AccessDeni
 import com.thejackfolio.microservices.instagramoauthclient.exceptions.AccessTokenException;
 import com.thejackfolio.microservices.instagramoauthclient.models.AccessTokenResponse;
 import com.thejackfolio.microservices.instagramoauthclient.servicehelpers.OAuthClientServiceHelper;
+import com.thejackfolio.microservices.instagramoauthclient.utilities.StringConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,15 +22,15 @@ public class OAuthClientService {
                                    String error,
                                    String error_reason,
                                    String error_description) throws AccessDeniedException {
-        if(error != null && error.equals("access_denied")){
-            LOGGER.info("Access Denied");
+        if(error != null && error.equals(StringConstants.ACCESS_DENIED_MESSAGE)){
+            LOGGER.info(error_description);
             throw new AccessDeniedException(error_description);
         }
         AccessTokenResponse response = null;
         try{
             response = helper.getAccessToken(code);
         } catch (AccessTokenException exception){
-            LOGGER.info("Exception occurred during Token Access");
+            LOGGER.info(exception.getMessage());
         }
         return response.getAccess_token();
     }
