@@ -1,6 +1,7 @@
 package com.thejackfolio.microservices.instagramoauthclient.controllers;
 
 import com.thejackfolio.microservices.instagramoauthclient.models.InstagramPostsResponseWrapper;
+import com.thejackfolio.microservices.instagramoauthclient.utilities.StringConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ public class AccessDeniedController {
     @GetMapping("/access-denied")
     public ResponseEntity<InstagramPostsResponseWrapper> accessDenied(){
         InstagramPostsResponseWrapper wrapper = new InstagramPostsResponseWrapper();
-        wrapper.setMessage("Access Denied by the instagram user");
+        wrapper.setMessage(StringConstants.ACCESS_DENIED);
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(wrapper);
     }
 }

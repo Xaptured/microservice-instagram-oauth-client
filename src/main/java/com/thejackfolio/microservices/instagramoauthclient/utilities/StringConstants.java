@@ -11,6 +11,9 @@ public class StringConstants {
     public static final String MAPPING_ERROR_MODEL_TO_ENTITY = "Error occurred while converting model to entity";
     public static final String MAPPING_ERROR_ENTITY_TO_MODEL = "Error occurred while converting entity to model";
     public static final String VALIDATION_ERROR = "Error occurred while validation";
+    public static final String ACCESS_DENIED = "Access Denied by the instagram user";
+    public static final String ACCESS_TOKEN_EXCEPTION = "Exception occurred while getting access token";
+    public static final String ACCESS_DENIED_MESSAGE = "access_denied";
 
     public static final String FIELDS = "FIELDS";
     public static final String LIMIT = "LIMIT";
