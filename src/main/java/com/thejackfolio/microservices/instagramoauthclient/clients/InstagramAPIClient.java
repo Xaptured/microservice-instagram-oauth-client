@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "get-authorization-access-token-using-API", url = "https://api.instagram.com")
+@FeignClient(name = "INSTAGRAM-API-SERVICE", url = "https://api.instagram.com")
 public interface InstagramAPIClient {
 
     @PostMapping(path = "/oauth/access_token", consumes = "application/x-www-form-urlencoded")
