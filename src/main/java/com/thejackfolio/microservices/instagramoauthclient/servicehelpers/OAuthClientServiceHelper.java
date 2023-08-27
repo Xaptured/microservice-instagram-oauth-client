@@ -39,12 +39,12 @@ public class OAuthClientServiceHelper {
     }
 
     public String constructGetPostsUrl(){
-        String getPostsUrl = "http://localhost:8084/instagram/get-posts";
+        String getPostsUrl = "http://localhost:8086/instagram/get-posts";
         return getPostsUrl;
     }
 
     public String constructGetPostNewTokenURL(String accessToken){
-        String getPostsNewTokenUrl = "http://localhost:8084/instagram/get-posts-new-token?access_token="+accessToken;
+        String getPostsNewTokenUrl = "http://localhost:8086/instagram/get-posts-new-token?access_token="+accessToken;
         return getPostsNewTokenUrl;
     }
 
