@@ -60,6 +60,7 @@ public class AuthorizationController {
         }
     }
 
+    @ResponseBody
     public String authorizeRetry(Exception exception){
         isRetryEnabled = false;
         LOGGER.info(StringConstants.FALLBACK_MESSAGE, exception);
@@ -95,6 +96,7 @@ public class AuthorizationController {
         return "redirect:" + getPostsNewTokenUrl;
     }
 
+    @ResponseBody
     public String getAccessTokenRetry(String code,String error,String error_reason,String error_description,Exception exception){
         isRetryEnabled = false;
         LOGGER.info(StringConstants.FALLBACK_MESSAGE, exception);
