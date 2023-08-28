@@ -2,8 +2,6 @@ package com.thejackfolio.microservices.instagramoauthclient.utilities;
 
 public class StringConstants {
 
-    private StringConstants(){}
-
     // Mapper and Database error messages
     public static final String MAPPING_ERROR = "Error occurred while mapping";
     public static final String DATABASE_ERROR = "Error occurred while database operation";
@@ -25,4 +23,8 @@ public class StringConstants {
     public static final String RESPONSE_TYPE = "RESPONSE_TYPE";
     public static final String GRANT_TYPE_ACCESS_TOKEN = "GRANT_TYPE_ACCESS_TOKEN";
     public static final String GRANT_TYPE_LONG_LIVE_ACCESS_TOKEN = "GRANT_TYPE_LONG_LIVE_ACCESS_TOKEN";
+    public static final String FALLBACK_MESSAGE = "Something went wrong. Please try again later";
+    public static final String RETRY_MESSAGE = "Something went wrong. Doing retry...";
+
+    private StringConstants(){}
 }
