@@ -1,3 +1,7 @@
+[![Build and Test Java Spring Boot Application](https://github.com/Xaptured/microservice-instagram-oauth-client/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Xaptured/microservice-instagram-oauth-client/actions/workflows/build-and-test.yml)
+
+[![Dependabot Updates](https://github.com/Xaptured/microservice-instagram-oauth-client/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Xaptured/microservice-instagram-oauth-client/actions/workflows/dependabot/dependabot-updates)
+
 # microservice-instagram-oauth-client
 
 This microservice is used as a layer above the Instagram Authorization APIs which are used to do authorization and get access token.  
